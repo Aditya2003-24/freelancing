@@ -1,14 +1,28 @@
 
 import './App.css'
-import Navbar from './Navbar'
+import ProductCard from './Cards';
+import TopNavbar from "./Navbar";
+// import ProductCardGrid from './timepas';
+import img from "./Images/vilage1.jpg"
+
+
+
+
+
+
+
 
 function App() {
 
   return (
     <>
-     <Navbar/>
+      <TopNavbar />
+      <ProductCard />
+      {/* <ProductCardGrid/> */}
+
+      
     </>
-  )
+  );
 }
 
 export default App

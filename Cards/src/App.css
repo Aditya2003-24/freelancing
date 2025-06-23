@@ -1,18 +1,555 @@
-*{
-  margin: 0%;
-  padding: 0%;
+/* Reset and Base Styles */
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.navb{
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.top-navbar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px 40px;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.left-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.phone-icon {
+  margin-right: 6px;
+  color: #333;
+}
+
+.phone-text {
+  font-weight: 500;
+}
+
+.right-login .login-btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid #205ecf;
+  color: #205ecf;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.right-login .login-btn:hover {
+  background-color: #e6f0ff;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 5px 10px;
+  width: 400px;
+  max-width: 100%;
+}
+
+.category-select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 14px;
+  color: #555;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #205ecf;
+  font-size: 16px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  color: #444;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #f2f2f2;
+}
+
+.nav-link.active {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Navbar Styles */
+.navb {
+  display: flex;
+  align-items: center;
   background-color: #f5f5f5;
   height: 50px;
-  
+  padding: 0 20px;
 }
-.log{
-  border: 1px solid black;
+
+.navb ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
-.navb ul li{
+
+.navb ul li {
   margin-left: 20%;
 }
+
+.log {
+  border: 1px solid black;
+}
+
+/* Card Styles */
+.card {
+  background: #fff;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Image Container and Hover Icons */
+.product-card {
+  width: 100%;
+  
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.product-image {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  
+}
+
+.overlay-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay-icons {
+  opacity: 1;
+}
+
+.image-container:hover .product-image {
+  transform: scale(1.05);
+}
+
+.icon-btn {
+  background: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.icon-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Text and Button Styles */
+.card h5 {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.read-more-content {
+  display: inline;
+}
+
+.read-more-btn {
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  background: none;
+  font-size: 14px;
+}
+
+.card h6 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.acar{
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Paragraph Swiper Styling */
+.para-swiper {
+  height: 120px;
+  margin-top: 10px;
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.para-swiper .swiper {
+  height: 100%;
+}
+
+.para-swiper .swiper-slide {
+  font-size: 14px;
+  line-height: 1.5;
+  color: black;
+  padding: 0;
+}
+
+.swiper-para {
+  height: 100%;
+}
+
+.swiper-para .swiper-slide {
+  font-size: 14px;
+  padding: 5px;
+  color: black;
+  background: white;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 600px;
+  max-width: 100%;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.search-select {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  flex: 0 0 150px;
+  cursor: pointer;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+  background: #f0f0f0;
+} */
+
+
+
+
+
+
+.product-card {
+  width: 320px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  transition: 0.3s ease;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hover-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.image-container:hover .hover-icons {
+  opacity: 1;
+}
+
+.image-container:hover .product-img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  max-height: 3em;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.description.expanded {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.read-toggle {
+  font-size: 14px;
+  color: #205ecf;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1c1c1c;
+  margin-top: 10px;
+} 
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .product-img {
+  transform: scale(1.05);
+}
+
+.hover-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.image-container:hover .hover-icons {
+  opacity: 1;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.read-toggle {
+  font-size: 14px;
+  color: #205ecf;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1c1c1c;
+  margin-top: 10px;
+} */
